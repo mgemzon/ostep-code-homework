@@ -21,6 +21,7 @@ int main(int argc, char *argv[]) {
 
   if (rc < 0) {
     fprintf(stderr, "fork failed\n");
+    return -1;
   } else if (rc == 0) {
     // Child code path.
     fprintf(stdout, "[child]: x is %d\n", x);
